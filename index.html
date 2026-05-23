@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="label">Calculator</div>
+
+  <div class="calc" role="application" aria-label="Calculator">
+
+    <!-- Display -->
+    <div class="display">
+      <div class="kbd-hint">keyboard ready</div>
+      <div class="expression" id="expression" aria-live="polite"></div>
+      <div class="result"     id="result"     aria-live="polite">0</div>
+    </div>
+
+    <!-- Button Grid -->
+    <div class="grid" role="group" aria-label="Calculator buttons">
+
+      <!-- Row 1 -->
+      <button class="btn btn-clear" data-action="clear">AC</button>
+      <button class="btn btn-ce"    data-action="ce">CE</button>
+      <button class="btn btn-pct"   data-action="pct">%</button>
+      <button class="btn btn-op"    data-op="÷">÷</button>
+
+      <!-- Row 2 -->
+      <button class="btn btn-digit" data-num="7">7</button>
+      <button class="btn btn-digit" data-num="8">8</button>
+      <button class="btn btn-digit" data-num="9">9</button>
+      <button class="btn btn-op"    data-op="×">×</button>
+
+      <!-- Row 3 -->
+      <button class="btn btn-digit" data-num="4">4</button>
+      <button class="btn btn-digit" data-num="5">5</button>
+      <button class="btn btn-digit" data-num="6">6</button>
+      <button class="btn btn-op"    data-op="−">−</button>
+
+      <!-- Row 4 -->
+      <button class="btn btn-digit" data-num="1">1</button>
+      <button class="btn btn-digit" data-num="2">2</button>
+      <button class="btn btn-digit" data-num="3">3</button>
+      <button class="btn btn-op"    data-op="+">+</button>
+
+      <!-- Row 5 -->
+      <button class="btn btn-digit btn-zero" data-num="0">0</button>
+      <button class="btn btn-dot"   data-action="dot">·</button>
+      <button class="btn btn-eq"    data-action="eq">=</button>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    Use <span>0–9</span> <span>+ − * /</span> <span>Enter</span> <span>Esc</span> <span>Backspace</span>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
